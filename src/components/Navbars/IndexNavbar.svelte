@@ -40,15 +40,13 @@
       id="example-navbar-warning"
     >
       <ul class="flex flex-col lg:flex-row list-none mr-auto">
+        {#each ["How it works", "Use cases", "Features", "Pricing", "FAQ"] as nav_i}
         <li class="flex items-center">
-          <a
-            class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
-            href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus?ref=ns-index-navbar"
-          >
-            <i class="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />
-            Docs
+          <a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href={`#${nav_i.split(" ").join("_")}`}>
+            {nav_i}
           </a>
         </li>
+      {/each}
       </ul>
       <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
         <li class="flex items-center">

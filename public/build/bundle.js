@@ -102,6 +102,12 @@ var app = (function () {
     function detach(node) {
         node.parentNode.removeChild(node);
     }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
     function element(name) {
         return document.createElement(name);
     }
@@ -28977,10 +28983,10 @@ var app = (function () {
 
     function create_fragment$c(ctx) {
     	let div3;
-    	let a0;
-    	let t1;
     	let div2;
     	let span0;
+    	let t1;
+    	let a0;
     	let t3;
     	let a1;
     	let t5;
@@ -28988,23 +28994,21 @@ var app = (function () {
     	let t7;
     	let a3;
     	let t9;
-    	let a4;
-    	let t11;
     	let div0;
-    	let t12;
+    	let t10;
     	let span1;
+    	let t12;
+    	let a4;
     	let t14;
     	let a5;
     	let t16;
-    	let a6;
-    	let t18;
     	let div1;
-    	let t19;
+    	let t17;
     	let span2;
+    	let t19;
+    	let a6;
     	let t21;
     	let a7;
-    	let t23;
-    	let a8;
     	let div2_class_value;
     	let mounted;
     	let dispose;
@@ -29012,78 +29016,72 @@ var app = (function () {
     	return {
     		c() {
     			div3 = element("div");
-    			a0 = element("a");
-    			a0.textContent = "Demo Pages";
-    			t1 = space();
     			div2 = element("div");
     			span0 = element("span");
     			span0.textContent = "Admin Layout";
+    			t1 = space();
+    			a0 = element("a");
+    			a0.textContent = "Dashboard";
     			t3 = space();
     			a1 = element("a");
-    			a1.textContent = "Dashboard";
+    			a1.textContent = "Settings";
     			t5 = space();
     			a2 = element("a");
-    			a2.textContent = "Settings";
+    			a2.textContent = "Tables";
     			t7 = space();
     			a3 = element("a");
-    			a3.textContent = "Tables";
+    			a3.textContent = "Maps";
     			t9 = space();
-    			a4 = element("a");
-    			a4.textContent = "Maps";
-    			t11 = space();
     			div0 = element("div");
-    			t12 = space();
+    			t10 = space();
     			span1 = element("span");
     			span1.textContent = "Auth Layout";
+    			t12 = space();
+    			a4 = element("a");
+    			a4.textContent = "Login";
     			t14 = space();
     			a5 = element("a");
-    			a5.textContent = "Login";
+    			a5.textContent = "Register";
     			t16 = space();
-    			a6 = element("a");
-    			a6.textContent = "Register";
-    			t18 = space();
     			div1 = element("div");
-    			t19 = space();
+    			t17 = space();
     			span2 = element("span");
     			span2.textContent = "No Layout";
+    			t19 = space();
+    			a6 = element("a");
+    			a6.textContent = "Landing";
     			t21 = space();
     			a7 = element("a");
-    			a7.textContent = "Landing";
-    			t23 = space();
-    			a8 = element("a");
-    			a8.textContent = "Profile";
-    			attr(a0, "class", "lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold");
-    			attr(a0, "href", "#pablo");
+    			a7.textContent = "Profile";
     			attr(span0, "class", "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400");
-    			attr(a1, "href", "/admin/dashboard");
+    			attr(a0, "href", "/admin/dashboard");
+    			attr(a0, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
+    			attr(a1, "href", "/admin/settings");
     			attr(a1, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a2, "href", "/admin/settings");
+    			attr(a2, "href", "/admin/tables");
     			attr(a2, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a3, "href", "/admin/tables");
+    			attr(a3, "href", "/admin/maps");
     			attr(a3, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a4, "href", "/admin/maps");
-    			attr(a4, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(div0, "class", "h-0 mx-4 my-2 border border-solid border-blueGray-100");
     			attr(span1, "class", "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400");
-    			attr(a5, "href", "/auth/login");
+    			attr(a4, "href", "/auth/login");
+    			attr(a4, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
+    			attr(a5, "href", "/auth/register");
     			attr(a5, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a6, "href", "/auth/register");
-    			attr(a6, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(div1, "class", "h-0 mx-4 my-2 border border-solid border-blueGray-100");
     			attr(span2, "class", "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400");
-    			attr(a7, "href", "/landing");
+    			attr(a6, "href", "/landing");
+    			attr(a6, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
+    			attr(a7, "href", "/profile");
     			attr(a7, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a8, "href", "/profile");
-    			attr(a8, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(div2, "class", div2_class_value = "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 " + (/*dropdownPopoverShow*/ ctx[0] ? "block" : "hidden"));
     		},
     		m(target, anchor) {
     			insert(target, div3, anchor);
-    			append(div3, a0);
-    			/*a0_binding*/ ctx[4](a0);
-    			append(div3, t1);
     			append(div3, div2);
     			append(div2, span0);
+    			append(div2, t1);
+    			append(div2, a0);
     			append(div2, t3);
     			append(div2, a1);
     			append(div2, t5);
@@ -29091,36 +29089,33 @@ var app = (function () {
     			append(div2, t7);
     			append(div2, a3);
     			append(div2, t9);
-    			append(div2, a4);
-    			append(div2, t11);
     			append(div2, div0);
-    			append(div2, t12);
+    			append(div2, t10);
     			append(div2, span1);
+    			append(div2, t12);
+    			append(div2, a4);
     			append(div2, t14);
     			append(div2, a5);
     			append(div2, t16);
-    			append(div2, a6);
-    			append(div2, t18);
     			append(div2, div1);
-    			append(div2, t19);
+    			append(div2, t17);
     			append(div2, span2);
+    			append(div2, t19);
+    			append(div2, a6);
     			append(div2, t21);
     			append(div2, a7);
-    			append(div2, t23);
-    			append(div2, a8);
-    			/*div2_binding*/ ctx[5](div2);
+    			/*div2_binding*/ ctx[2](div2);
 
     			if (!mounted) {
     				dispose = [
-    					listen(a0, "click", /*toggleDropdown*/ ctx[3]),
+    					action_destroyer(link.call(null, a0)),
     					action_destroyer(link.call(null, a1)),
     					action_destroyer(link.call(null, a2)),
     					action_destroyer(link.call(null, a3)),
     					action_destroyer(link.call(null, a4)),
     					action_destroyer(link.call(null, a5)),
     					action_destroyer(link.call(null, a6)),
-    					action_destroyer(link.call(null, a7)),
-    					action_destroyer(link.call(null, a8))
+    					action_destroyer(link.call(null, a7))
     				];
 
     				mounted = true;
@@ -29135,8 +29130,7 @@ var app = (function () {
     		o: noop,
     		d(detaching) {
     			if (detaching) detach(div3);
-    			/*a0_binding*/ ctx[4](null);
-    			/*div2_binding*/ ctx[5](null);
+    			/*div2_binding*/ ctx[2](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -29145,42 +29139,16 @@ var app = (function () {
 
     function instance$b($$self, $$props, $$invalidate) {
     	let dropdownPopoverShow = false;
-    	let btnDropdownRef;
     	let popoverDropdownRef;
-
-    	const toggleDropdown = event => {
-    		event.preventDefault();
-
-    		if (dropdownPopoverShow) {
-    			$$invalidate(0, dropdownPopoverShow = false);
-    		} else {
-    			$$invalidate(0, dropdownPopoverShow = true);
-    			createPopper(btnDropdownRef, popoverDropdownRef, { placement: "bottom-start" });
-    		}
-    	};
-
-    	function a0_binding($$value) {
-    		binding_callbacks[$$value ? "unshift" : "push"](() => {
-    			btnDropdownRef = $$value;
-    			$$invalidate(1, btnDropdownRef);
-    		});
-    	}
 
     	function div2_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
     			popoverDropdownRef = $$value;
-    			$$invalidate(2, popoverDropdownRef);
+    			$$invalidate(1, popoverDropdownRef);
     		});
     	}
 
-    	return [
-    		dropdownPopoverShow,
-    		btnDropdownRef,
-    		popoverDropdownRef,
-    		toggleDropdown,
-    		a0_binding,
-    		div2_binding
-    	];
+    	return [dropdownPopoverShow, popoverDropdownRef, div2_binding];
     }
 
     class PagesDropdown extends SvelteComponent {
@@ -29192,6 +29160,42 @@ var app = (function () {
 
     /* src/components/Navbars/AuthNavbar.svelte generated by Svelte v3.35.0 */
 
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[2] = list[i];
+    	return child_ctx;
+    }
+
+    // (37:6) {#each ["How it works", "Use cases", "Features", "Pricing", "FAQ"] as nav_i}
+    function create_each_block$1(ctx) {
+    	let li;
+    	let a;
+    	let t0;
+    	let t1;
+
+    	return {
+    		c() {
+    			li = element("li");
+    			a = element("a");
+    			t0 = text(/*nav_i*/ ctx[2]);
+    			t1 = space();
+    			attr(a, "class", "hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold");
+    			attr(a, "href", `#${/*nav_i*/ ctx[2].split(" ").join("_")}`);
+    			attr(li, "class", "flex items-center");
+    		},
+    		m(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, a);
+    			append(a, t0);
+    			append(li, t1);
+    		},
+    		p: noop,
+    		d(detaching) {
+    			if (detaching) detach(li);
+    		}
+    	};
+    }
+
     function create_fragment$b(ctx) {
     	let nav;
     	let div2;
@@ -29202,22 +29206,29 @@ var app = (function () {
     	let t2;
     	let div1;
     	let ul0;
-    	let t4;
+    	let t3;
     	let ul1;
-    	let li1;
+    	let li0;
     	let pagesdropdown;
-    	let t5;
+    	let t4;
+    	let li1;
+    	let t7;
     	let li2;
-    	let t8;
+    	let t10;
     	let li3;
-    	let t11;
+    	let t13;
     	let li4;
-    	let t14;
-    	let li5;
     	let div1_class_value;
     	let current;
     	let mounted;
     	let dispose;
+    	let each_value = ["How it works", "Use cases", "Features", "Pricing", "FAQ"];
+    	let each_blocks = [];
+
+    	for (let i = 0; i < 5; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
     	pagesdropdown = new PagesDropdown({});
 
     	return {
@@ -29234,45 +29245,46 @@ var app = (function () {
     			div1 = element("div");
     			ul0 = element("ul");
 
-    			ul0.innerHTML = `<li class="flex items-center"><a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus?ref=ns-auth-navbar"><i class="lg:text-blueGray-200 text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"></i>
-            Docs</a></li>`;
+    			for (let i = 0; i < 5; i += 1) {
+    				each_blocks[i].c();
+    			}
 
-    			t4 = space();
+    			t3 = space();
     			ul1 = element("ul");
-    			li1 = element("li");
+    			li0 = element("li");
     			create_component(pagesdropdown.$$.fragment);
-    			t5 = space();
-    			li2 = element("li");
+    			t4 = space();
+    			li1 = element("li");
 
-    			li2.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
+    			li1.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Share</span></a>`;
 
-    			t8 = space();
-    			li3 = element("li");
+    			t7 = space();
+    			li2 = element("li");
 
-    			li3.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
+    			li2.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Tweet</span></a>`;
 
-    			t11 = space();
-    			li4 = element("li");
+    			t10 = space();
+    			li3 = element("li");
 
-    			li4.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-auth-navbar" target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
+    			li3.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-auth-navbar" target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Star</span></a>`;
 
-    			t14 = space();
-    			li5 = element("li");
-    			li5.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Login</button>`;
+    			t13 = space();
+    			li4 = element("li");
+    			li4.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Login</button>`;
     			attr(a0, "class", "text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
     			attr(a0, "href", "/");
     			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
     			attr(button0, "type", "button");
     			attr(div0, "class", "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start");
     			attr(ul0, "class", "flex flex-col lg:flex-row list-none mr-auto");
+    			attr(li0, "class", "flex items-center");
     			attr(li1, "class", "flex items-center");
     			attr(li2, "class", "flex items-center");
     			attr(li3, "class", "flex items-center");
     			attr(li4, "class", "flex items-center");
-    			attr(li5, "class", "flex items-center");
     			attr(ul1, "class", "flex flex-col lg:flex-row list-none lg:ml-auto");
     			attr(div1, "class", div1_class_value = "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none rounded shadow-lg " + (/*navbarOpen*/ ctx[0] ? "block" : "hidden"));
     			attr(div1, "id", "example-navbar-warning");
@@ -29289,18 +29301,23 @@ var app = (function () {
     			append(div2, t2);
     			append(div2, div1);
     			append(div1, ul0);
-    			append(div1, t4);
+
+    			for (let i = 0; i < 5; i += 1) {
+    				each_blocks[i].m(ul0, null);
+    			}
+
+    			append(div1, t3);
     			append(div1, ul1);
+    			append(ul1, li0);
+    			mount_component(pagesdropdown, li0, null);
+    			append(ul1, t4);
     			append(ul1, li1);
-    			mount_component(pagesdropdown, li1, null);
-    			append(ul1, t5);
+    			append(ul1, t7);
     			append(ul1, li2);
-    			append(ul1, t8);
+    			append(ul1, t10);
     			append(ul1, li3);
-    			append(ul1, t11);
+    			append(ul1, t13);
     			append(ul1, li4);
-    			append(ul1, t14);
-    			append(ul1, li5);
     			current = true;
 
     			if (!mounted) {
@@ -29328,6 +29345,7 @@ var app = (function () {
     		},
     		d(detaching) {
     			if (detaching) detach(nav);
+    			destroy_each(each_blocks, detaching);
     			destroy_component(pagesdropdown);
     			mounted = false;
     			run_all(dispose);
@@ -29387,10 +29405,8 @@ var app = (function () {
     			t5 = space();
     			div2 = element("div");
 
-    			div2.innerHTML = `<ul class="flex flex-wrap list-none md:justify-end justify-center"><li><a href="https://www.creative-tim.com?ref=ns-footer-small" class="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3">Fabiffy</a></li> 
-          <li><a href="https://www.creative-tim.com/presentation?ref=ns-footer-small" class="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3">About Us</a></li> 
-          <li><a href="http://blog.creative-tim.com?ref=ns-footer-small" class="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3">Blog</a></li> 
-          <li><a href="https://github.com/creativetimofficial/notus-svelte/blob/main/LICENSE.md?ref=ns-footer-small" class="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3">MIT License</a></li></ul>`;
+    			div2.innerHTML = `<ul class="flex flex-wrap list-none md:justify-end justify-center"><li><a href="/" class="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3">About Us</a></li> 
+          <li><a href="/" class="text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3">Blog</a></li></ul>`;
 
     			attr(hr, "class", "mb-6 border-b-1 border-blueGray-600");
     			attr(a0, "href", "https://www.creative-tim.com?ref=ns-footer-small");
@@ -29961,10 +29977,10 @@ var app = (function () {
 
     function create_fragment$6(ctx) {
     	let div3;
-    	let a0;
-    	let t1;
     	let div2;
     	let span0;
+    	let t1;
+    	let a0;
     	let t3;
     	let a1;
     	let t5;
@@ -29972,23 +29988,21 @@ var app = (function () {
     	let t7;
     	let a3;
     	let t9;
-    	let a4;
-    	let t11;
     	let div0;
-    	let t12;
+    	let t10;
     	let span1;
+    	let t12;
+    	let a4;
     	let t14;
     	let a5;
     	let t16;
-    	let a6;
-    	let t18;
     	let div1;
-    	let t19;
+    	let t17;
     	let span2;
+    	let t19;
+    	let a6;
     	let t21;
     	let a7;
-    	let t23;
-    	let a8;
     	let div2_class_value;
     	let mounted;
     	let dispose;
@@ -29996,78 +30010,72 @@ var app = (function () {
     	return {
     		c() {
     			div3 = element("div");
-    			a0 = element("a");
-    			a0.textContent = "Demo Pages";
-    			t1 = space();
     			div2 = element("div");
     			span0 = element("span");
     			span0.textContent = "Admin Layout";
+    			t1 = space();
+    			a0 = element("a");
+    			a0.textContent = "Dashboard";
     			t3 = space();
     			a1 = element("a");
-    			a1.textContent = "Dashboard";
+    			a1.textContent = "Settings";
     			t5 = space();
     			a2 = element("a");
-    			a2.textContent = "Settings";
+    			a2.textContent = "Tables";
     			t7 = space();
     			a3 = element("a");
-    			a3.textContent = "Tables";
+    			a3.textContent = "Maps";
     			t9 = space();
-    			a4 = element("a");
-    			a4.textContent = "Maps";
-    			t11 = space();
     			div0 = element("div");
-    			t12 = space();
+    			t10 = space();
     			span1 = element("span");
     			span1.textContent = "Auth Layout";
+    			t12 = space();
+    			a4 = element("a");
+    			a4.textContent = "Login";
     			t14 = space();
     			a5 = element("a");
-    			a5.textContent = "Login";
+    			a5.textContent = "Register";
     			t16 = space();
-    			a6 = element("a");
-    			a6.textContent = "Register";
-    			t18 = space();
     			div1 = element("div");
-    			t19 = space();
+    			t17 = space();
     			span2 = element("span");
     			span2.textContent = "No Layout";
+    			t19 = space();
+    			a6 = element("a");
+    			a6.textContent = "Landing";
     			t21 = space();
     			a7 = element("a");
-    			a7.textContent = "Landing";
-    			t23 = space();
-    			a8 = element("a");
-    			a8.textContent = "Profile";
-    			attr(a0, "class", "hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold");
-    			attr(a0, "href", "#pablo");
+    			a7.textContent = "Profile";
     			attr(span0, "class", "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400");
-    			attr(a1, "href", "/admin/dashboard");
+    			attr(a0, "href", "/admin/dashboard");
+    			attr(a0, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
+    			attr(a1, "href", "/admin/settings");
     			attr(a1, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a2, "href", "/admin/settings");
+    			attr(a2, "href", "/admin/tables");
     			attr(a2, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a3, "href", "/admin/tables");
+    			attr(a3, "href", "/admin/maps");
     			attr(a3, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a4, "href", "/admin/maps");
-    			attr(a4, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(div0, "class", "h-0 mx-4 my-2 border border-solid border-blueGray-100");
     			attr(span1, "class", "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400");
-    			attr(a5, "href", "/auth/login");
+    			attr(a4, "href", "/auth/login");
+    			attr(a4, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
+    			attr(a5, "href", "/auth/register");
     			attr(a5, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a6, "href", "/auth/register");
-    			attr(a6, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(div1, "class", "h-0 mx-4 my-2 border border-solid border-blueGray-100");
     			attr(span2, "class", "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400");
-    			attr(a7, "href", "/landing");
+    			attr(a6, "href", "/landing");
+    			attr(a6, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
+    			attr(a7, "href", "/profile");
     			attr(a7, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(a8, "href", "/profile");
-    			attr(a8, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(div2, "class", div2_class_value = "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 " + (/*dropdownPopoverShow*/ ctx[0] ? "block" : "hidden"));
     		},
     		m(target, anchor) {
     			insert(target, div3, anchor);
-    			append(div3, a0);
-    			/*a0_binding*/ ctx[4](a0);
-    			append(div3, t1);
     			append(div3, div2);
     			append(div2, span0);
+    			append(div2, t1);
+    			append(div2, a0);
     			append(div2, t3);
     			append(div2, a1);
     			append(div2, t5);
@@ -30075,36 +30083,33 @@ var app = (function () {
     			append(div2, t7);
     			append(div2, a3);
     			append(div2, t9);
-    			append(div2, a4);
-    			append(div2, t11);
     			append(div2, div0);
-    			append(div2, t12);
+    			append(div2, t10);
     			append(div2, span1);
+    			append(div2, t12);
+    			append(div2, a4);
     			append(div2, t14);
     			append(div2, a5);
     			append(div2, t16);
-    			append(div2, a6);
-    			append(div2, t18);
     			append(div2, div1);
-    			append(div2, t19);
+    			append(div2, t17);
     			append(div2, span2);
+    			append(div2, t19);
+    			append(div2, a6);
     			append(div2, t21);
     			append(div2, a7);
-    			append(div2, t23);
-    			append(div2, a8);
-    			/*div2_binding*/ ctx[5](div2);
+    			/*div2_binding*/ ctx[2](div2);
 
     			if (!mounted) {
     				dispose = [
-    					listen(a0, "click", /*toggleDropdown*/ ctx[3]),
+    					action_destroyer(link.call(null, a0)),
     					action_destroyer(link.call(null, a1)),
     					action_destroyer(link.call(null, a2)),
     					action_destroyer(link.call(null, a3)),
     					action_destroyer(link.call(null, a4)),
     					action_destroyer(link.call(null, a5)),
     					action_destroyer(link.call(null, a6)),
-    					action_destroyer(link.call(null, a7)),
-    					action_destroyer(link.call(null, a8))
+    					action_destroyer(link.call(null, a7))
     				];
 
     				mounted = true;
@@ -30119,8 +30124,7 @@ var app = (function () {
     		o: noop,
     		d(detaching) {
     			if (detaching) detach(div3);
-    			/*a0_binding*/ ctx[4](null);
-    			/*div2_binding*/ ctx[5](null);
+    			/*div2_binding*/ ctx[2](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -30129,42 +30133,16 @@ var app = (function () {
 
     function instance$6($$self, $$props, $$invalidate) {
     	let dropdownPopoverShow = false;
-    	let btnDropdownRef;
     	let popoverDropdownRef;
-
-    	const toggleDropdown = event => {
-    		event.preventDefault();
-
-    		if (dropdownPopoverShow) {
-    			$$invalidate(0, dropdownPopoverShow = false);
-    		} else {
-    			$$invalidate(0, dropdownPopoverShow = true);
-    			createPopper(btnDropdownRef, popoverDropdownRef, { placement: "bottom-start" });
-    		}
-    	};
-
-    	function a0_binding($$value) {
-    		binding_callbacks[$$value ? "unshift" : "push"](() => {
-    			btnDropdownRef = $$value;
-    			$$invalidate(1, btnDropdownRef);
-    		});
-    	}
 
     	function div2_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
     			popoverDropdownRef = $$value;
-    			$$invalidate(2, popoverDropdownRef);
+    			$$invalidate(1, popoverDropdownRef);
     		});
     	}
 
-    	return [
-    		dropdownPopoverShow,
-    		btnDropdownRef,
-    		popoverDropdownRef,
-    		toggleDropdown,
-    		a0_binding,
-    		div2_binding
-    	];
+    	return [dropdownPopoverShow, popoverDropdownRef, div2_binding];
     }
 
     class IndexDropdown extends SvelteComponent {
@@ -30176,6 +30154,42 @@ var app = (function () {
 
     /* src/components/Navbars/IndexNavbar.svelte generated by Svelte v3.35.0 */
 
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[2] = list[i];
+    	return child_ctx;
+    }
+
+    // (43:8) {#each ["How it works", "Use cases", "Features", "Pricing", "FAQ"] as nav_i}
+    function create_each_block(ctx) {
+    	let li;
+    	let a;
+    	let t0;
+    	let t1;
+
+    	return {
+    		c() {
+    			li = element("li");
+    			a = element("a");
+    			t0 = text(/*nav_i*/ ctx[2]);
+    			t1 = space();
+    			attr(a, "class", "hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold");
+    			attr(a, "href", `#${/*nav_i*/ ctx[2].split(" ").join("_")}`);
+    			attr(li, "class", "flex items-center");
+    		},
+    		m(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, a);
+    			append(a, t0);
+    			append(li, t1);
+    		},
+    		p: noop,
+    		d(detaching) {
+    			if (detaching) detach(li);
+    		}
+    	};
+    }
+
     function create_fragment$5(ctx) {
     	let nav;
     	let div2;
@@ -30186,22 +30200,29 @@ var app = (function () {
     	let t1;
     	let div1;
     	let ul0;
-    	let t3;
+    	let t2;
     	let ul1;
-    	let li1;
+    	let li0;
     	let indexdropdown;
-    	let t4;
+    	let t3;
+    	let li1;
+    	let t6;
     	let li2;
-    	let t7;
+    	let t9;
     	let li3;
-    	let t10;
+    	let t12;
     	let li4;
-    	let t13;
-    	let li5;
     	let div1_class_value;
     	let current;
     	let mounted;
     	let dispose;
+    	let each_value = ["How it works", "Use cases", "Features", "Pricing", "FAQ"];
+    	let each_blocks = [];
+
+    	for (let i = 0; i < 5; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
     	indexdropdown = new IndexDropdown({});
 
     	return {
@@ -30218,45 +30239,46 @@ var app = (function () {
     			div1 = element("div");
     			ul0 = element("ul");
 
-    			ul0.innerHTML = `<li class="flex items-center"><a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus?ref=ns-index-navbar"><i class="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"></i>
-            Docs</a></li>`;
+    			for (let i = 0; i < 5; i += 1) {
+    				each_blocks[i].c();
+    			}
 
-    			t3 = space();
+    			t2 = space();
     			ul1 = element("ul");
-    			li1 = element("li");
+    			li0 = element("li");
     			create_component(indexdropdown.$$.fragment);
-    			t4 = space();
-    			li2 = element("li");
+    			t3 = space();
+    			li1 = element("li");
 
-    			li2.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
+    			li1.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Share</span></a>`;
 
-    			t7 = space();
-    			li3 = element("li");
+    			t6 = space();
+    			li2 = element("li");
 
-    			li3.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
+    			li2.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Tweet</span></a>`;
 
-    			t10 = space();
-    			li4 = element("li");
+    			t9 = space();
+    			li3 = element("li");
 
-    			li4.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-index-navbar" target="_blank"><i class="text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
+    			li3.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-index-navbar" target="_blank"><i class="text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Star</span></a>`;
 
-    			t13 = space();
-    			li5 = element("li");
-    			li5.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>`;
+    			t12 = space();
+    			li4 = element("li");
+    			li4.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>`;
     			attr(a0, "class", "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
     			attr(a0, "href", "/");
     			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
     			attr(button0, "type", "button");
     			attr(div0, "class", "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start");
     			attr(ul0, "class", "flex flex-col lg:flex-row list-none mr-auto");
+    			attr(li0, "class", "flex items-center");
     			attr(li1, "class", "flex items-center");
     			attr(li2, "class", "flex items-center");
     			attr(li3, "class", "flex items-center");
     			attr(li4, "class", "flex items-center");
-    			attr(li5, "class", "flex items-center");
     			attr(ul1, "class", "flex flex-col lg:flex-row list-none lg:ml-auto");
     			attr(div1, "class", div1_class_value = "lg:flex flex-grow items-center " + (/*navbarOpen*/ ctx[0] ? "block" : "hidden"));
     			attr(div1, "id", "example-navbar-warning");
@@ -30273,18 +30295,23 @@ var app = (function () {
     			append(div2, t1);
     			append(div2, div1);
     			append(div1, ul0);
-    			append(div1, t3);
+
+    			for (let i = 0; i < 5; i += 1) {
+    				each_blocks[i].m(ul0, null);
+    			}
+
+    			append(div1, t2);
     			append(div1, ul1);
+    			append(ul1, li0);
+    			mount_component(indexdropdown, li0, null);
+    			append(ul1, t3);
     			append(ul1, li1);
-    			mount_component(indexdropdown, li1, null);
-    			append(ul1, t4);
+    			append(ul1, t6);
     			append(ul1, li2);
-    			append(ul1, t7);
+    			append(ul1, t9);
     			append(ul1, li3);
-    			append(ul1, t10);
+    			append(ul1, t12);
     			append(ul1, li4);
-    			append(ul1, t13);
-    			append(ul1, li5);
     			current = true;
 
     			if (!mounted) {
@@ -30312,6 +30339,7 @@ var app = (function () {
     		},
     		d(detaching) {
     			if (detaching) detach(nav);
+    			destroy_each(each_blocks, detaching);
     			destroy_component(indexdropdown);
     			mounted = false;
     			run_all(dispose);
