@@ -30003,7 +30003,6 @@ var app = (function () {
     	let a6;
     	let t21;
     	let a7;
-    	let div2_class_value;
     	let mounted;
     	let dispose;
 
@@ -30068,7 +30067,7 @@ var app = (function () {
     			attr(a6, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
     			attr(a7, "href", "/profile");
     			attr(a7, "class", "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700");
-    			attr(div2, "class", div2_class_value = "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 " + (/*dropdownPopoverShow*/ ctx[0] ? "block" : "hidden"));
+    			attr(div2, "class", "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 " + ("hidden"));
     		},
     		m(target, anchor) {
     			insert(target, div3, anchor);
@@ -30098,7 +30097,7 @@ var app = (function () {
     			append(div2, a6);
     			append(div2, t21);
     			append(div2, a7);
-    			/*div2_binding*/ ctx[2](div2);
+    			/*div2_binding*/ ctx[1](div2);
 
     			if (!mounted) {
     				dispose = [
@@ -30115,16 +30114,12 @@ var app = (function () {
     				mounted = true;
     			}
     		},
-    		p(ctx, [dirty]) {
-    			if (dirty & /*dropdownPopoverShow*/ 1 && div2_class_value !== (div2_class_value = "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 " + (/*dropdownPopoverShow*/ ctx[0] ? "block" : "hidden"))) {
-    				attr(div2, "class", div2_class_value);
-    			}
-    		},
+    		p: noop,
     		i: noop,
     		o: noop,
     		d(detaching) {
     			if (detaching) detach(div3);
-    			/*div2_binding*/ ctx[2](null);
+    			/*div2_binding*/ ctx[1](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -30132,17 +30127,16 @@ var app = (function () {
     }
 
     function instance$6($$self, $$props, $$invalidate) {
-    	let dropdownPopoverShow = false;
     	let popoverDropdownRef;
 
     	function div2_binding($$value) {
     		binding_callbacks[$$value ? "unshift" : "push"](() => {
     			popoverDropdownRef = $$value;
-    			$$invalidate(1, popoverDropdownRef);
+    			$$invalidate(0, popoverDropdownRef);
     		});
     	}
 
-    	return [dropdownPopoverShow, popoverDropdownRef, div2_binding];
+    	return [popoverDropdownRef, div2_binding];
     }
 
     class IndexDropdown extends SvelteComponent {
@@ -30370,19 +30364,19 @@ var app = (function () {
     	let footer;
     	let div0;
     	let t0;
-    	let div11;
-    	let div7;
-    	let t28;
-    	let hr;
-    	let t29;
     	let div10;
+    	let div6;
+    	let t24;
+    	let hr;
+    	let t25;
     	let div9;
     	let div8;
-    	let t30;
-    	let t31;
-    	let t32;
+    	let div7;
+    	let t26;
+    	let t27;
+    	let t28;
     	let a8;
-    	let t34;
+    	let t30;
 
     	return {
     		c() {
@@ -30390,15 +30384,11 @@ var app = (function () {
     			div0 = element("div");
     			div0.innerHTML = `<svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0"><polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon></svg>`;
     			t0 = space();
-    			div11 = element("div");
-    			div7 = element("div");
+    			div10 = element("div");
+    			div6 = element("div");
 
-    			div7.innerHTML = `<div class="w-full lg:w-6/12 px-4"><h4 class="text-3xl font-semibold">Let&#39;s keep in touch!</h4> 
-        <h5 class="text-lg mt-0 mb-2 text-blueGray-600">Find us on any of these platforms, we respond 1-2 business days.</h5> 
-        <div class="mt-6 lg:mb-0 mb-6"><button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><i class="fab fa-twitter"></i></button> 
-          <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><i class="fab fa-facebook-square"></i></button> 
-          <button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><i class="fab fa-dribbble"></i></button> 
-          <button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><i class="fab fa-github"></i></button></div></div> 
+    			div6.innerHTML = `<div class="w-full lg:w-6/12 px-4"><h4 class="text-3xl font-semibold">Let&#39;s keep in touch!</h4> 
+        <h5 class="text-lg mt-0 mb-2 text-blueGray-600">Grub us an message. We respond 1-2 business days.</h5></div> 
       <div class="w-full lg:w-6/12 px-4"><div class="flex flex-wrap items-top mb-6"><div class="w-full lg:w-4/12 px-4 ml-auto"><span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span> 
             <ul class="list-unstyled"><li><a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://www.creative-tim.com/presentation?ref=ns-footer">About Us</a></li> 
               <li><a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://blog.creative-tim.com?ref=ns-footer">Blog</a></li> 
@@ -30410,47 +30400,47 @@ var app = (function () {
               <li><a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/privacy?ref=ns-footer">Privacy Policy</a></li> 
               <li><a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm" href="https://creative-tim.com/contact-us?ref=ns-footer">Contact Us</a></li></ul></div></div></div>`;
 
-    			t28 = space();
+    			t24 = space();
     			hr = element("hr");
-    			t29 = space();
-    			div10 = element("div");
+    			t25 = space();
     			div9 = element("div");
     			div8 = element("div");
-    			t30 = text("Copyright © ");
-    			t31 = text(/*date*/ ctx[0]);
-    			t32 = text(" Fabiffy by\n          ");
+    			div7 = element("div");
+    			t26 = text("Copyright © ");
+    			t27 = text(/*date*/ ctx[0]);
+    			t28 = space();
     			a8 = element("a");
     			a8.textContent = "Fabiffy";
-    			t34 = text("\n          .");
+    			t30 = text("\n          .");
     			attr(div0, "class", "bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20");
     			set_style(div0, "transform", "translateZ(0)");
-    			attr(div7, "class", "flex flex-wrap text-center lg:text-left");
+    			attr(div6, "class", "flex flex-wrap text-center lg:text-left");
     			attr(hr, "class", "my-6 border-blueGray-300");
     			attr(a8, "href", "https://www.Fabliffy.com");
     			attr(a8, "class", "text-blueGray-500 hover:text-blueGray-800");
-    			attr(div8, "class", "text-sm text-blueGray-500 font-semibold py-1");
-    			attr(div9, "class", "w-full md:w-4/12 px-4 mx-auto text-center");
-    			attr(div10, "class", "flex flex-wrap items-center md:justify-between justify-center");
-    			attr(div11, "class", "container mx-auto px-4");
+    			attr(div7, "class", "text-sm text-blueGray-500 font-semibold py-1");
+    			attr(div8, "class", "w-full md:w-4/12 px-4 mx-auto text-center");
+    			attr(div9, "class", "flex flex-wrap items-center md:justify-between justify-center");
+    			attr(div10, "class", "container mx-auto px-4");
     			attr(footer, "class", "relative bg-blueGray-200 pt-8 pb-6");
     		},
     		m(target, anchor) {
     			insert(target, footer, anchor);
     			append(footer, div0);
     			append(footer, t0);
-    			append(footer, div11);
-    			append(div11, div7);
-    			append(div11, t28);
-    			append(div11, hr);
-    			append(div11, t29);
-    			append(div11, div10);
+    			append(footer, div10);
+    			append(div10, div6);
+    			append(div10, t24);
+    			append(div10, hr);
+    			append(div10, t25);
     			append(div10, div9);
     			append(div9, div8);
-    			append(div8, t30);
-    			append(div8, t31);
-    			append(div8, t32);
-    			append(div8, a8);
-    			append(div8, t34);
+    			append(div8, div7);
+    			append(div7, t26);
+    			append(div7, t27);
+    			append(div7, t28);
+    			append(div7, a8);
+    			append(div7, t30);
     		},
     		p: noop,
     		i: noop,
@@ -31110,32 +31100,32 @@ var app = (function () {
     	let img2_src_value;
     	let t57;
     	let div45;
-    	let t64;
+    	let t62;
     	let div51;
     	let div50;
     	let img3;
     	let img3_src_value;
-    	let t65;
+    	let t63;
     	let div49;
-    	let t71;
+    	let t68;
     	let div55;
     	let div54;
     	let img4;
     	let img4_src_value;
-    	let t72;
+    	let t69;
     	let div53;
-    	let t79;
+    	let t76;
     	let div59;
     	let div58;
     	let img5;
     	let img5_src_value;
-    	let t80;
+    	let t77;
     	let div57;
-    	let t88;
+    	let t85;
     	let section3;
-    	let t108;
+    	let t105;
     	let section4;
-    	let t123;
+    	let t120;
     	let footer;
     	let current;
     	let mounted;
@@ -31245,27 +31235,24 @@ var app = (function () {
 
     			div45.innerHTML = `<h5 class="text-xl font-bold">Ryan Tompson</h5> 
                 <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">Web Developer</p> 
-                <div class="mt-6"><button class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-twitter"></i></button> 
-                  <button class="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-facebook-f"></i></button> 
-                  <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-dribbble"></i></button></div>`;
+                <div class="mt-6"><button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-dribbble"></i></button></div>`;
 
-    			t64 = space();
+    			t62 = space();
     			div51 = element("div");
     			div50 = element("div");
     			img3 = element("img");
-    			t65 = space();
+    			t63 = space();
     			div49 = element("div");
 
     			div49.innerHTML = `<h5 class="text-xl font-bold">Romina Hadid</h5> 
                 <p class="mt-1 text-sm text-blueGray-400 uppercase font-semibold">Marketing Specialist</p> 
-                <div class="mt-6"><button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-google"></i></button> 
-                  <button class="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-facebook-f"></i></button></div>`;
+                <div class="mt-6"><button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-google"></i></button></div>`;
 
-    			t71 = space();
+    			t68 = space();
     			div55 = element("div");
     			div54 = element("div");
     			img4 = element("img");
-    			t72 = space();
+    			t69 = space();
     			div53 = element("div");
 
     			div53.innerHTML = `<h5 class="text-xl font-bold">Alexa Smith</h5> 
@@ -31274,11 +31261,11 @@ var app = (function () {
                   <button class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-twitter"></i></button> 
                   <button class="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-instagram"></i></button></div>`;
 
-    			t79 = space();
+    			t76 = space();
     			div59 = element("div");
     			div58 = element("div");
     			img5 = element("img");
-    			t80 = space();
+    			t77 = space();
     			div57 = element("div");
 
     			div57.innerHTML = `<h5 class="text-xl font-bold">Jenna Kardi</h5> 
@@ -31288,7 +31275,7 @@ var app = (function () {
                   <button class="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-twitter"></i></button> 
                   <button class="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button"><i class="fab fa-instagram"></i></button></div>`;
 
-    			t88 = space();
+    			t85 = space();
     			section3 = element("section");
 
     			section3.innerHTML = `<div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20" style="transform: translateZ(0);"><svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0"><polygon class="text-blueGray-800 fill-current" points="2560 0 2560 100 0 100"></polygon></svg></div> 
@@ -31310,7 +31297,7 @@ var app = (function () {
             <p class="mt-2 mb-4 text-blueGray-400">Some quick example text to build on the card title and make up the
               bulk of the card&#39;s content.</p></div></div></div>`;
 
-    			t108 = space();
+    			t105 = space();
     			section4 = element("section");
 
     			section4.innerHTML = `<div class="container mx-auto px-4"><div class="flex flex-wrap justify-center lg:-mt-64 -mt-48"><div class="w-full lg:w-6/12 px-4"><div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200"><div class="flex-auto p-5 lg:p-10"><h4 class="text-2xl font-semibold">Want to work with us?</h4> 
@@ -31325,7 +31312,7 @@ var app = (function () {
                   <textarea id="message" rows="4" cols="80" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type a message..."></textarea></div> 
                 <div class="text-center mt-6"><button class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Send Message</button></div></div></div></div></div></div>`;
 
-    			t123 = space();
+    			t120 = space();
     			create_component(footer.$$.fragment);
     			attr(div6, "class", "relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75");
     			attr(div19, "class", "flex flex-wrap");
@@ -31409,29 +31396,29 @@ var app = (function () {
     			append(div46, img2);
     			append(div46, t57);
     			append(div46, div45);
-    			append(div60, t64);
+    			append(div60, t62);
     			append(div60, div51);
     			append(div51, div50);
     			append(div50, img3);
-    			append(div50, t65);
+    			append(div50, t63);
     			append(div50, div49);
-    			append(div60, t71);
+    			append(div60, t68);
     			append(div60, div55);
     			append(div55, div54);
     			append(div54, img4);
-    			append(div54, t72);
+    			append(div54, t69);
     			append(div54, div53);
-    			append(div60, t79);
+    			append(div60, t76);
     			append(div60, div59);
     			append(div59, div58);
     			append(div58, img5);
-    			append(div58, t80);
+    			append(div58, t77);
     			append(div58, div57);
-    			append(main, t88);
+    			append(main, t85);
     			append(main, section3);
-    			append(main, t108);
+    			append(main, t105);
     			append(main, section4);
-    			append(div82, t123);
+    			append(div82, t120);
     			mount_component(footer, div82, null);
     			current = true;
 
