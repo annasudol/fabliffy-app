@@ -29166,7 +29166,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (37:6) {#each ["How it works", "Use cases", "Features", "Pricing", "FAQ"] as nav_i}
+    // (35:6) {#each ["How it works", "Use cases", "Features", "Pricing", "FAQ"] as nav_i}
     function create_each_block$1(ctx) {
     	let li;
     	let a;
@@ -29200,7 +29200,7 @@ var app = (function () {
     	let nav;
     	let div2;
     	let div0;
-    	let a0;
+    	let a;
     	let t1;
     	let button0;
     	let t2;
@@ -29212,12 +29212,6 @@ var app = (function () {
     	let pagesdropdown;
     	let t4;
     	let li1;
-    	let t7;
-    	let li2;
-    	let t10;
-    	let li3;
-    	let t13;
-    	let li4;
     	let div1_class_value;
     	let current;
     	let mounted;
@@ -29236,8 +29230,8 @@ var app = (function () {
     			nav = element("nav");
     			div2 = element("div");
     			div0 = element("div");
-    			a0 = element("a");
-    			a0.textContent = "Fabiffy";
+    			a = element("a");
+    			a.textContent = "Fabiffy";
     			t1 = space();
     			button0 = element("button");
     			button0.innerHTML = `<i class="text-white fas fa-bars"></i>`;
@@ -29255,36 +29249,15 @@ var app = (function () {
     			create_component(pagesdropdown.$$.fragment);
     			t4 = space();
     			li1 = element("li");
-
-    			li1.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
-            <span class="lg:hidden inline-block ml-2">Share</span></a>`;
-
-    			t7 = space();
-    			li2 = element("li");
-
-    			li2.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
-            <span class="lg:hidden inline-block ml-2">Tweet</span></a>`;
-
-    			t10 = space();
-    			li3 = element("li");
-
-    			li3.innerHTML = `<a class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-auth-navbar" target="_blank"><i class="lg:text-blueGray-200 text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
-            <span class="lg:hidden inline-block ml-2">Star</span></a>`;
-
-    			t13 = space();
-    			li4 = element("li");
-    			li4.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Login</button>`;
-    			attr(a0, "class", "text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
-    			attr(a0, "href", "/");
+    			li1.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Login</button>`;
+    			attr(a, "class", "text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
+    			attr(a, "href", "/");
     			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
     			attr(button0, "type", "button");
     			attr(div0, "class", "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start");
     			attr(ul0, "class", "flex flex-col lg:flex-row list-none mr-auto");
     			attr(li0, "class", "flex items-center");
     			attr(li1, "class", "flex items-center");
-    			attr(li2, "class", "flex items-center");
-    			attr(li3, "class", "flex items-center");
-    			attr(li4, "class", "flex items-center");
     			attr(ul1, "class", "flex flex-col lg:flex-row list-none lg:ml-auto");
     			attr(div1, "class", div1_class_value = "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none rounded shadow-lg " + (/*navbarOpen*/ ctx[0] ? "block" : "hidden"));
     			attr(div1, "id", "example-navbar-warning");
@@ -29295,7 +29268,7 @@ var app = (function () {
     			insert(target, nav, anchor);
     			append(nav, div2);
     			append(div2, div0);
-    			append(div0, a0);
+    			append(div0, a);
     			append(div0, t1);
     			append(div0, button0);
     			append(div2, t2);
@@ -29310,19 +29283,13 @@ var app = (function () {
     			append(div1, ul1);
     			append(ul1, li0);
     			mount_component(pagesdropdown, li0, null);
-    			append(ul1, t4);
+    			append(li0, t4);
     			append(ul1, li1);
-    			append(ul1, t7);
-    			append(ul1, li2);
-    			append(ul1, t10);
-    			append(ul1, li3);
-    			append(ul1, t13);
-    			append(ul1, li4);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					action_destroyer(link.call(null, a0)),
+    					action_destroyer(link.call(null, a)),
     					listen(button0, "click", /*setNavbarOpen*/ ctx[1])
     				];
 
@@ -30188,7 +30155,7 @@ var app = (function () {
     	let nav;
     	let div2;
     	let div0;
-    	let a0;
+    	let a;
     	let t0;
     	let button0;
     	let t1;
@@ -30200,12 +30167,6 @@ var app = (function () {
     	let indexdropdown;
     	let t3;
     	let li1;
-    	let t6;
-    	let li2;
-    	let t9;
-    	let li3;
-    	let t12;
-    	let li4;
     	let div1_class_value;
     	let current;
     	let mounted;
@@ -30224,8 +30185,8 @@ var app = (function () {
     			nav = element("nav");
     			div2 = element("div");
     			div0 = element("div");
-    			a0 = element("a");
-    			a0.innerHTML = `<img src="../assets/img/logo.svg" alt="fabiffly" class="h-12"/>`;
+    			a = element("a");
+    			a.innerHTML = `<img src="../assets/img/logo.svg" alt="fabiffly" class="h-12"/>`;
     			t0 = space();
     			button0 = element("button");
     			button0.innerHTML = `<i class="fas fa-bars"></i>`;
@@ -30243,36 +30204,15 @@ var app = (function () {
     			create_component(indexdropdown.$$.fragment);
     			t3 = space();
     			li1 = element("li");
-
-    			li1.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
-            <span class="lg:hidden inline-block ml-2">Share</span></a>`;
-
-    			t6 = space();
-    			li2 = element("li");
-
-    			li2.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
-            <span class="lg:hidden inline-block ml-2">Tweet</span></a>`;
-
-    			t9 = space();
-    			li3 = element("li");
-
-    			li3.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-index-navbar" target="_blank"><i class="text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
-            <span class="lg:hidden inline-block ml-2">Star</span></a>`;
-
-    			t12 = space();
-    			li4 = element("li");
-    			li4.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>`;
-    			attr(a0, "class", "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
-    			attr(a0, "href", "/");
+    			li1.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>`;
+    			attr(a, "class", "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
+    			attr(a, "href", "/");
     			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
     			attr(button0, "type", "button");
     			attr(div0, "class", "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start");
     			attr(ul0, "class", "flex flex-col lg:flex-row list-none mr-auto");
     			attr(li0, "class", "flex items-center");
     			attr(li1, "class", "flex items-center");
-    			attr(li2, "class", "flex items-center");
-    			attr(li3, "class", "flex items-center");
-    			attr(li4, "class", "flex items-center");
     			attr(ul1, "class", "flex flex-col lg:flex-row list-none lg:ml-auto");
     			attr(div1, "class", div1_class_value = "lg:flex flex-grow items-center " + (/*navbarOpen*/ ctx[0] ? "block" : "hidden"));
     			attr(div1, "id", "example-navbar-warning");
@@ -30283,7 +30223,7 @@ var app = (function () {
     			insert(target, nav, anchor);
     			append(nav, div2);
     			append(div2, div0);
-    			append(div0, a0);
+    			append(div0, a);
     			append(div0, t0);
     			append(div0, button0);
     			append(div2, t1);
@@ -30300,17 +30240,11 @@ var app = (function () {
     			mount_component(indexdropdown, li0, null);
     			append(ul1, t3);
     			append(ul1, li1);
-    			append(ul1, t6);
-    			append(ul1, li2);
-    			append(ul1, t9);
-    			append(ul1, li3);
-    			append(ul1, t12);
-    			append(ul1, li4);
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					action_destroyer(link.call(null, a0)),
+    					action_destroyer(link.call(null, a)),
     					listen(button0, "click", /*setNavbarOpen*/ ctx[1])
     				];
 

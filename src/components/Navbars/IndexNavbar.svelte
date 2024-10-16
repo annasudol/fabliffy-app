@@ -52,7 +52,7 @@
         <li class="flex items-center">
           <IndexDropdown />
         </li>
-        <li class="flex items-center">
+        <!-- <li class="flex items-center">
           <a
             class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F"
@@ -72,9 +72,9 @@
             <i class="text-blueGray-400 fab fa-twitter text-lg leading-lg" />
             <span class="lg:hidden inline-block ml-2">Tweet</span>
           </a>
-        </li>
+        </li> -->
 
-        <li class="flex items-center">
+        <!-- <li class="flex items-center">
           <a
             class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold"
             href="https://github.com/creativetimofficial/notus-svelte?ref=ns-index-navbar"
@@ -83,7 +83,7 @@
             <i class="text-blueGray-400 fab fa-github text-lg leading-lg" />
             <span class="lg:hidden inline-block ml-2">Star</span>
           </a>
-        </li>
+        </li> -->
 
         <li class="flex items-center">
           <button
