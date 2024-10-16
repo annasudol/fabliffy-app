@@ -4138,7 +4138,7 @@ var app = (function () {
     			button0.innerHTML = `<i class="fas fa-bars"></i>`;
     			t0 = space();
     			a0 = element("a");
-    			a0.textContent = "Notus Svelte";
+    			a0.textContent = "Fabiffy";
     			t2 = space();
     			ul0 = element("ul");
     			li0 = element("li");
@@ -4152,7 +4152,7 @@ var app = (function () {
     			div2 = element("div");
     			div0 = element("div");
     			a1 = element("a");
-    			a1.textContent = "Notus Svelte";
+    			a1.textContent = "Fabiffy";
     			t6 = space();
     			div1 = element("div");
     			button1 = element("button");
@@ -28701,7 +28701,7 @@ var app = (function () {
     				title: "Hello World!"
     			});
 
-    		const contentString = "<div class=\"info-window-content\"><h2>Notus Svelte</h2>" + "<p>A beautiful UI Kit and Admin for Tailwind CSS. It is Free and Open Source.</p></div>";
+    		const contentString = "<div class=\"info-window-content\"><h2>Fabiffy</h2>" + "<p>A beautiful UI Kit and Admin for Tailwind CSS. It is Free and Open Source.</p></div>";
     		const infowindow = new google.maps.InfoWindow({ content: contentString });
 
     		google.maps.event.addListener(marker, "click", function () {
@@ -29226,7 +29226,7 @@ var app = (function () {
     			div2 = element("div");
     			div0 = element("div");
     			a0 = element("a");
-    			a0.textContent = "Notus Svelte";
+    			a0.textContent = "Fabiffy";
     			t1 = space();
     			button0 = element("button");
     			button0.innerHTML = `<i class="text-white fas fa-bars"></i>`;
@@ -29261,7 +29261,7 @@ var app = (function () {
 
     			t14 = space();
     			li5 = element("li");
-    			li5.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Download</button>`;
+    			li5.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Login</button>`;
     			attr(a0, "class", "text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
     			attr(a0, "href", "/");
     			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
@@ -30181,22 +30181,22 @@ var app = (function () {
     	let div2;
     	let div0;
     	let a0;
-    	let t1;
+    	let t0;
     	let button0;
-    	let t2;
+    	let t1;
     	let div1;
     	let ul0;
-    	let t4;
+    	let t3;
     	let ul1;
     	let li1;
     	let indexdropdown;
-    	let t5;
+    	let t4;
     	let li2;
-    	let t8;
+    	let t7;
     	let li3;
-    	let t11;
+    	let t10;
     	let li4;
-    	let t14;
+    	let t13;
     	let li5;
     	let div1_class_value;
     	let current;
@@ -30210,42 +30210,42 @@ var app = (function () {
     			div2 = element("div");
     			div0 = element("div");
     			a0 = element("a");
-    			a0.textContent = "Notus Svelte";
-    			t1 = space();
+    			a0.innerHTML = `<img src="../assets/img/logo.svg" alt="fabiffly" class="h-12"/>`;
+    			t0 = space();
     			button0 = element("button");
     			button0.innerHTML = `<i class="fas fa-bars"></i>`;
-    			t2 = space();
+    			t1 = space();
     			div1 = element("div");
     			ul0 = element("ul");
 
     			ul0.innerHTML = `<li class="flex items-center"><a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus?ref=ns-index-navbar"><i class="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"></i>
             Docs</a></li>`;
 
-    			t4 = space();
+    			t3 = space();
     			ul1 = element("ul");
     			li1 = element("li");
     			create_component(indexdropdown.$$.fragment);
-    			t5 = space();
+    			t4 = space();
     			li2 = element("li");
 
     			li2.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F%23%2F" target="_blank"><i class="text-blueGray-400 fab fa-facebook text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Share</span></a>`;
 
-    			t8 = space();
+    			t7 = space();
     			li3 = element("li");
 
     			li3.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-svelte%2F&amp;text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20Svelte%20UI%20Kit%20and%20Admin.%20Let%20Notus%20Svelte%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level." target="_blank"><i class="text-blueGray-400 fab fa-twitter text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Tweet</span></a>`;
 
-    			t11 = space();
+    			t10 = space();
     			li4 = element("li");
 
     			li4.innerHTML = `<a class="hover:text-blueGray-500 text-blueGray-700 px-3 py-2 flex items-center text-xs uppercase font-bold" href="https://github.com/creativetimofficial/notus-svelte?ref=ns-index-navbar" target="_blank"><i class="text-blueGray-400 fab fa-github text-lg leading-lg"></i> 
             <span class="lg:hidden inline-block ml-2">Star</span></a>`;
 
-    			t14 = space();
+    			t13 = space();
     			li5 = element("li");
-    			li5.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Download</button>`;
+    			li5.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>`;
     			attr(a0, "class", "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
     			attr(a0, "href", "/");
     			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
@@ -30268,22 +30268,22 @@ var app = (function () {
     			append(nav, div2);
     			append(div2, div0);
     			append(div0, a0);
-    			append(div0, t1);
+    			append(div0, t0);
     			append(div0, button0);
-    			append(div2, t2);
+    			append(div2, t1);
     			append(div2, div1);
     			append(div1, ul0);
-    			append(div1, t4);
+    			append(div1, t3);
     			append(div1, ul1);
     			append(ul1, li1);
     			mount_component(indexdropdown, li1, null);
-    			append(ul1, t5);
+    			append(ul1, t4);
     			append(ul1, li2);
-    			append(ul1, t8);
+    			append(ul1, t7);
     			append(ul1, li3);
-    			append(ul1, t11);
+    			append(ul1, t10);
     			append(ul1, li4);
-    			append(ul1, t14);
+    			append(ul1, t13);
     			append(ul1, li5);
     			current = true;
 
@@ -30390,7 +30390,7 @@ var app = (function () {
     			div8 = element("div");
     			t30 = text("Copyright © ");
     			t31 = text(/*date*/ ctx[0]);
-    			t32 = text(" Notus Svelte by\n          ");
+    			t32 = text(" Fabiffy by\n          ");
     			a8 = element("a");
     			a8.textContent = "Fabiffy";
     			t34 = text("\n          .");
@@ -30635,8 +30635,8 @@ var app = (function () {
     			section0 = element("section");
     			div3 = element("div");
 
-    			div3.innerHTML = `<div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4"><div class="pt-32 sm:pt-0"><h2 class="font-semibold text-4xl text-blueGray-600">Notus Svelte - A beautiful extension for Tailwind CSS.</h2> 
-        <p class="mt-4 text-lg leading-relaxed text-blueGray-500">Notus Svelte is Free and Open Source. It does not change any of the CSS from
+    			div3.innerHTML = `<div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4"><div class="pt-32 sm:pt-0"><h2 class="font-semibold text-4xl text-blueGray-600">Fabiffy - A beautiful extension for Tailwind CSS.</h2> 
+        <p class="mt-4 text-lg leading-relaxed text-blueGray-500">Fabiffy is Free and Open Source. It does not change any of the CSS from
           <a href="https://tailwindcss.com/?ref=creativetim" class="text-blueGray-600" target="_blank">Tailwind CSS.</a>
           It features multiple HTML elements and it comes with dynamic
           components for ReactJS, Vue and Angular.</p> 
@@ -30661,7 +30661,7 @@ var app = (function () {
 
       <div class="w-full md:w-6/12 px-4"><div class="flex flex-wrap"><div class="w-full md:w-6/12 px-4"><div class="relative flex flex-col mt-4"><div class="px-4 py-5 flex-auto"><div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fas fa-sitemap"></i></div> 
                 <h6 class="text-xl mb-1 font-semibold">CSS Components</h6> 
-                <p class="mb-4 text-blueGray-500">Notus Svelte comes with a huge number of Fully Coded CSS
+                <p class="mb-4 text-blueGray-500">Fabiffy comes with a huge number of Fully Coded CSS
                   components.</p></div></div> 
             <div class="relative flex flex-col min-w-0"><div class="px-4 py-5 flex-auto"><div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fas fa-drafting-compass"></i></div> 
                 <h6 class="text-xl mb-1 font-semibold">JavaScript Components</h6> 
@@ -30674,7 +30674,7 @@ var app = (function () {
             <div class="relative flex flex-col min-w-0"><div class="px-4 py-5 flex-auto"><div class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fas fa-file-alt"></i></div> 
                 <h6 class="text-xl mb-1 font-semibold">Documentation</h6> 
                 <p class="mb-4 text-blueGray-500">Built by developers for developers. You will love how easy is
-                  to to work with Notus Svelte.</p></div></div></div></div></div></div>`;
+                  to to work with Fabiffy.</p></div></div></div></div></div></div>`;
 
     			t38 = space();
     			div45 = element("div");
@@ -30768,7 +30768,7 @@ var app = (function () {
     			div62 = element("div");
 
     			div62.innerHTML = `<div class="w-full md:w-6/12 px-12 md:px-4"><h2 class="font-semibold text-4xl">Beautiful Example Pages</h2> 
-      <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">Notus Svelte is a completly new product built using our past
+      <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">Fabiffy is a completly new product built using our past
         experience in web templates. Take the examples we made for you and start
         playing with them.</p></div>`;
 
@@ -31128,7 +31128,7 @@ var app = (function () {
         "><span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span></div> 
       <div class="container relative mx-auto"><div class="items-center flex flex-wrap"><div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center"><div class="pr-12"><h1 class="text-white font-semibold text-5xl">Your story starts with us.</h1> 
               <p class="mt-4 text-lg text-blueGray-200">This is a simple example of a Landing Page you can build using
-                Notus Svelte. It features multiple CSS components
+                Fabiffy. It features multiple CSS components
                 based on the Tailwind CSS design system.</p></div></div></div></div> 
       <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0);"><svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0"><polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon></svg></div>`;
 
@@ -31168,7 +31168,7 @@ var app = (function () {
     			p5.textContent = "The kit comes with three pre-built pages to help you get started\n              faster. You can change the text and images and you're good to go.\n              Just make sure you enable them first via JavaScript.";
     			t28 = space();
     			a = element("a");
-    			a.textContent = "Check Notus Svelte!";
+    			a.textContent = "Check Fabiffy!";
     			t30 = space();
     			div23 = element("div");
 

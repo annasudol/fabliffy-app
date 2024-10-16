@@ -26,7 +26,7 @@ const aliases = alias({
 const indexTemplate = `<!--
 
 =========================================================
-* Notus Svelte - v1.1.0 based on Tailwind Starter Kit by Fabiffy
+* Fabiffy - v1.1.0 based on Tailwind Starter Kit by Fabiffy
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/notus-svelte
@@ -56,7 +56,7 @@ const indexTemplate = `<!--
       href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link rel="stylesheet" href="/assets/styles/tailwind.css" />
-    <title>Notus Svelte</title>
+    <title>Fabiffy</title>
 
     <script>
       if (process === undefined) {

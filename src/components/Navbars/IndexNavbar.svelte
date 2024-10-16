@@ -25,7 +25,7 @@
         class="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
         href="/"
       >
-        Notus Svelte
+        <img src="../assets/img/logo.svg" alt="fabiffly" class="h-12" />
       </a>
       <button
         class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -92,7 +92,7 @@
             class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
             type="button"
           >
-            <i class="fas fa-arrow-alt-circle-down"></i> Download
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
           </button>
         </li>
       </ul>
