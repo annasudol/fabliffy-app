@@ -12,7 +12,7 @@
 </script>
 
 <nav
-  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow"
+  class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-white shadow"
 >
   <div
     class="container px-4 mx-auto flex flex-wrap items-center justify-between"
@@ -22,13 +22,13 @@
     >
       <a
         use:link
-        class="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+        class="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 pt-2 whitespace-nowrap uppercase"
         href="/"
       >
         <img src="../assets/img/logo.svg" alt="fabiffly" class="h-12" />
       </a>
       <button
-        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        class="cursor-pointer text-xl leading-none h-12 w-12 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none mt-1"
         type="button"
         on:click="{setNavbarOpen}"
       >

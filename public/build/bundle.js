@@ -29252,7 +29252,7 @@ var app = (function () {
     			li1.innerHTML = `<button class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fas fa-arrow-alt-circle-down"></i> Login</button>`;
     			attr(a, "class", "text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
     			attr(a, "href", "/");
-    			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
+    			attr(button0, "class", "cursor-pointer text-xl leading-none  border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none h-12 w-12");
     			attr(button0, "type", "button");
     			attr(div0, "class", "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start");
     			attr(ul0, "class", "flex flex-col lg:flex-row list-none mr-auto");
@@ -30205,9 +30205,9 @@ var app = (function () {
     			t3 = space();
     			li1 = element("li");
     			li1.innerHTML = `<button class="bg-red-400 text-white active:bg-red-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150" type="button"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</button>`;
-    			attr(a, "class", "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase");
+    			attr(a, "class", "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 pt-2 whitespace-nowrap uppercase");
     			attr(a, "href", "/");
-    			attr(button0, "class", "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none");
+    			attr(button0, "class", "cursor-pointer text-xl leading-none h-12 w-12 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none mt-1");
     			attr(button0, "type", "button");
     			attr(div0, "class", "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start");
     			attr(ul0, "class", "flex flex-col lg:flex-row list-none mr-auto");
@@ -30217,7 +30217,7 @@ var app = (function () {
     			attr(div1, "class", div1_class_value = "lg:flex flex-grow items-center " + (/*navbarOpen*/ ctx[0] ? "block" : "hidden"));
     			attr(div1, "id", "example-navbar-warning");
     			attr(div2, "class", "container px-4 mx-auto flex flex-wrap items-center justify-between");
-    			attr(nav, "class", "top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow");
+    			attr(nav, "class", "top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-white shadow");
     		},
     		m(target, anchor) {
     			insert(target, nav, anchor);

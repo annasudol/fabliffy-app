@@ -20,7 +20,7 @@
         Fabiffy
       </a>
       <button
-        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        class="cursor-pointer text-xl leading-none  border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none h-12 w-12"
         type="button"
         on:click="{setNavbarOpen}"
       >
