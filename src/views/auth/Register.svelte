@@ -1,8 +1,9 @@
 <script>
   // core components
+  import { link } from "svelte-routing";
   const github = "../assets/img/github.svg";
   const google = "../assets/img/google.svg";
-  export let location;
+  //export let location;
 </script>
 
 <div class="container mx-auto px-4 h-full">
@@ -18,13 +19,6 @@
             </h6>
           </div>
           <div class="btn-wrapper text-center">
-            <button
-              class="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-              type="button"
-            >
-              <img alt="..." class="w-5 mr-1" src="{github}" />
-              Github
-            </button>
             <button
               class="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
               type="button"
@@ -110,6 +104,19 @@
               </button>
             </div>
           </form>
+        </div>
+        
+      </div>
+      <div class="flex flex-wrap mt-6 relative">
+        <div class="w-1/2">
+          <a href="#pablo" on:click={(e) => e.preventDefault()} class="text-blueGray-200">
+            <small>Forgot password?</small>
+          </a>
+        </div>
+        <div class="w-1/2 text-right">
+          <a use:link href="/auth/login" class="text-blueGray-200">
+            <small>Login to an account</small>
+          </a>
         </div>
       </div>
     </div>
